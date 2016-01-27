@@ -1,0 +1,51 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {
+            "config.xml": {
+                "parents": {
+                    "/*": [
+                        {
+                            "xml": "<feature name=\"ezAR\"><param name=\"ios-package\" value=\"CDVezAR\" /></feature>",
+                            "count": 1
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "installed_plugins": {
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "com.phonegap.helloworld"
+        },
+        "com.ezartech.ezar": {
+            "PACKAGE_NAME": "com.phonegap.helloworld"
+        }
+    },
+    "dependent_plugins": {},
+    "modules": [
+        {
+            "file": "plugins/com.ezartech.ezar/www/ezar.js",
+            "id": "com.ezartech.ezar.ezar",
+            "pluginId": "com.ezartech.ezar",
+            "clobbers": [
+                "ezar"
+            ]
+        },
+        {
+            "file": "plugins/com.ezartech.ezar/www/camera.js",
+            "id": "com.ezartech.ezar.camera",
+            "pluginId": "com.ezartech.ezar",
+            "clobbers": [
+                "camera"
+            ]
+        }
+    ],
+    "plugin_metadata": {
+        "cordova-plugin-whitelist": "1.2.1",
+        "com.ezartech.ezar": "0.1.0"
+    }
+}
